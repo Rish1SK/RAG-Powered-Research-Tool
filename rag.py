@@ -74,7 +74,6 @@ def generate_answer(query):
     if not vector_store:
         raise RuntimeError("Vector database is not initialized ")
 
-    # This works again with "langchain<0.1.0"
     chain = RetrievalQAWithSourcesChain.from_chain_type(
         llm=llm, 
         chain_type="stuff", 
